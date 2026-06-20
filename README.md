@@ -6,6 +6,10 @@ The Worker uses `redirect: "manual"` and cancels each response body as soon as h
 
 Built by Codex Desktop and GPT-5.5 xhigh. [Full codex transcript](https://gist.github.com/simonw/264bd6b8a39fc34c91c9c867454c64b9).
 
+Initial prompt:
+
+> Build a cloudflare worker app I can deploy using wrangler which provides an HTML form where I can paste a URL, it then follows redirects on that URL up to 10 times to report back the full redirect chain and the eventual location. It does this with HTTP GET that it cuts off as soon as headers have all come back.
+
 ## Local Development
 
 ```bash
