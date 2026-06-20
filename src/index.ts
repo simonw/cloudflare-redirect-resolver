@@ -195,7 +195,10 @@ async function fetchHeaders(url: string): Promise<Response> {
       },
     });
 
-    await response.body?.cancel();
+    // Cancel the body stream so large pages are not fetched
+    if (response.body !== null) {
+      await response.body.cancel();
+    }
     return response;
   } catch (cause) {
     if (cause instanceof Error && cause.name === "AbortError") {
