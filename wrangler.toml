@@ -1,0 +1,6 @@
+name = "cloudflare-redirect-resolver"
+main = "src/index.ts"
+compatibility_date = "2026-06-20"
+
+[observability]
+enabled = true
